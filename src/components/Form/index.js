@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-import Form from './components/Form';
-import Todo from './components/Todo';
 
-class App extends Component {
+class Form extends Component {
 
   constructor(props) {
     super(props);
@@ -12,11 +10,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Form/>
-        <Todo/>
+        
       </div>
     );
   }
 }
 
-export default App;
+export default Form;
