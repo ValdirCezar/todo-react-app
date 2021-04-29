@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class Form extends Component {
+class Header extends Component {
 
   constructor(props) {
     super(props);
@@ -10,10 +10,10 @@ class Form extends Component {
   render() {
     return (
       <div>
-        Form works!
+        Header works!
       </div>
     );
   }
 }
 
-export default Form;
+export default Header;
