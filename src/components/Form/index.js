@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import './Form.css'
+import Todo from '../Todo';
 
 class Form extends Component {
 
@@ -13,12 +14,13 @@ class Form extends Component {
     };
 
     this.addItem = this.addItem.bind(this);
+    this.deleteItem = this.deleteItem.bind(this);
   }
 
   addItem(event) {
     let state = this.state;
-   
-    if(this.state.tarefa !== '') {
+
+    if (this.state.tarefa !== '') {
       let newItem = {
         text: this.state.tarefa,
         key: Date.now()
@@ -27,7 +29,15 @@ class Form extends Component {
       this.setState(state)
     }
     event.preventDefault();
-    console.log(this.state.items)
+    this.setState({ tarefa: '' });
+  }
+
+  deleteItem(key) {
+    let filto = this.state.items.filter((item) => {
+      return (item.key !== key);
+    })
+
+    this.setState({ items: filto })
   }
 
   render() {
@@ -54,6 +64,8 @@ class Form extends Component {
           />
         </form>
         <Button onClick={this.addItem} variant="outlined" color="primary"> Adicionar </Button>
+
+        <Todo items={this.state.items} delete={this.deleteItem} />
       </div>
     );
   }
