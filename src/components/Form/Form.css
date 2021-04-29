@@ -1,8 +1,12 @@
 .container {
-  margin-top: 9%;
+  margin-top: 7%;
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+}
+
+h1 {
+text-align: center;
 }
 
 button {
