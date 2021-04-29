@@ -1,12 +1,13 @@
-.footer {
+.header {
   position: fixed;
-  bottom: 0;
-  height: 5%;
+  top: 0;
+  height: 10%;
   width: 100%;
-  background-color: black;
+  background-color: rgb(32, 32, 32);
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
+  font-size: 1.6rem;
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './index.css'
 
 class Header extends Component {
 
@@ -9,8 +10,8 @@ class Header extends Component {
 
   render() {
     return (
-      <div>
-        Header works!
+      <div className="header">
+        Todo list
       </div>
     );
   }
